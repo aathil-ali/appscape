@@ -10,11 +10,14 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
+
 # Copy the rest of the application code to the container
 COPY . .
 
 # Expose the port on which the Express.js application will run
 EXPOSE 3000
+
+RUN mkdir logs
 
 # Start the Express.js application
 CMD ["node", "src/index.js"]
