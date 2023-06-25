@@ -1,0 +1,36 @@
+{
+  "name": "appscape",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "migrate:make": "knex  migrate:make",
+    "migrate:latest": "knex  migrate:latest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bull-board/express": "^5.2.0",
+    "@slack/web-api": "^6.8.1",
+    "axios": "^1.4.0",
+    "config": "^3.3.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "knex": "^2.4.2",
+    "moment": "^2.29.4",
+    "mysql2": "^3.3.2",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.2",
+    "pino": "^8.14.1",
+    "pino-pretty": "^10.0.0",
+    "rate-limiter-flexible": "^2.4.1",
+    "sequelize": "^6.31.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
