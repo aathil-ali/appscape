@@ -14,8 +14,10 @@ services:
     node2:
         build: .
         environment:
+            - NODE_ENV=production
             - APP_ID=2
     node3:
         build: .
         environment:
+            - NODE_ENV=production
             - APP_ID=3
