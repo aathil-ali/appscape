@@ -1,37 +1,21 @@
 version: '3'
-services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - '3000:3000'
-    environment:
-      - NODE_ENV=production
-   
-    networks:
-      - app-network
-  app2:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - '13000:13000'
-    environment:
-      - NODE_ENV=production
-    
-    networks:
-      - app-network
 
-  load-balancer:
-    image: nginx
-    ports:
-      - '80:80'
-    volumes:
-      - .nginx-c.conf:/etc/nginx/nginx.conf:ro
-    networks:
-      - app-network
+services: 
+    nginx_lb:
+        build: ngnix
+        ports: 
+            - 8080:8080
 
-networks:
-  app-network:
-    driver: bridge
+    node1:
+        build: .
+        environment:
+            - NODE_ENV=production
+            - APP_ID=1
+    node2:
+        build: .
+        environment:
+            - APP_ID=2
+    node3:
+        build: .
+        environment:
+            - APP_ID=3

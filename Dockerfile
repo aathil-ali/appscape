@@ -15,9 +15,7 @@ RUN npm install
 COPY . .
 
 # Expose the port on which the Express.js application will run
-EXPOSE 3000
-
-RUN mkdir logs
+EXPOSE 5000
 
 # Start the Express.js application
 CMD ["node", "src/index.js"]
