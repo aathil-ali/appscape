@@ -13,8 +13,8 @@ Make sure you have the following installed:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/hubspot-connect-app.git
-   cd hubspot-connect-app
+   git clone https://github.com/aathil-ali/appscape.git
+   cd apscape
    ```
 
 2. **Install Dependencies:**
